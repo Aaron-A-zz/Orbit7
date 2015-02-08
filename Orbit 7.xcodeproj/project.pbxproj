@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21100C401A6AE8270007CDB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C3F1A6AE8270007CDB4 /* AppDelegate.swift */; };
+		21100C421A6AE8270007CDB4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 21100C411A6AE8270007CDB4 /* GameScene.sks */; };
+		21100C441A6AE8270007CDB4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C431A6AE8270007CDB4 /* GameScene.swift */; };
+		21100C461A6AE8270007CDB4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C451A6AE8270007CDB4 /* GameViewController.swift */; };
+		21100C491A6AE8270007CDB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21100C471A6AE8270007CDB4 /* Main.storyboard */; };
+		21100C4B1A6AE8270007CDB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21100C4A1A6AE8270007CDB4 /* Images.xcassets */; };
+		21100C4E1A6AE8270007CDB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21100C4C1A6AE8270007CDB4 /* LaunchScreen.xib */; };
+		21100C5A1A6AE8270007CDB4 /* Orbit_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C591A6AE8270007CDB4 /* Orbit_7Tests.swift */; };
+		21100C641A6AE9440007CDB4 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C631A6AE9440007CDB4 /* Menu.swift */; };
+		21100C661A6AE9600007CDB4 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C651A6AE9600007CDB4 /* Shapes.swift */; };
+		21100C681A6AE97A0007CDB4 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21100C671A6AE97A0007CDB4 /* GameOver.swift */; };
+		21100C991A6AED450007CDB4 /* zapzap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 21100C981A6AED450007CDB4 /* zapzap.wav */; };
+		21100C9B1A6AEDF50007CDB4 /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 21100C9A1A6AEDF50007CDB4 /* Stars.sks */; };
+		2134CE941A7092B1008E76C3 /* asteroid2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2134CE931A7092B1008E76C3 /* asteroid2.png */; };
+		2156C0CE1A6C20950067C612 /* ParticleFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2156C0CC1A6C20950067C612 /* ParticleFire.sks */; };
+		2156C0CF1A6C20950067C612 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2156C0CD1A6C20950067C612 /* spark.png */; };
+		2179028A1A744CC500B7A1BE /* Spiraling.wav in Resources */ = {isa = PBXBuildFile; fileRef = 217902891A744CC500B7A1BE /* Spiraling.wav */; };
+		2179028C1A7451A900B7A1BE /* playerlife.png in Resources */ = {isa = PBXBuildFile; fileRef = 2179028B1A7451A900B7A1BE /* playerlife.png */; };
+		218963C31A73D3EB00877B48 /* menuTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 218963C21A73D3EB00877B48 /* menuTest.png */; };
+		218963CB1A73D85600877B48 /* redDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 218963CA1A73D85600877B48 /* redDot@2x.png */; };
+		218963CF1A73D94800877B48 /* purpleDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 218963CE1A73D94800877B48 /* purpleDot@2x.png */; };
+		218963D11A73D9C800877B48 /* blueDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 218963D01A73D9C800877B48 /* blueDot@2x.png */; };
+		218963D31A73DAC700877B48 /* greenDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 218963D21A73DAC700877B48 /* greenDot@2x.png */; };
+		218963D91A73E62600877B48 /* sunDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 218963D81A73E62600877B48 /* sunDot@2x.png */; };
+		21C4F5F81A726AA000725B74 /* redAsteroidL.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F5F51A726AA000725B74 /* redAsteroidL.png */; };
+		21C4F5F91A726AA000725B74 /* redAsteroidM.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F5F61A726AA000725B74 /* redAsteroidM.png */; };
+		21C4F5FA1A726AA000725B74 /* redAsteroidS.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F5F71A726AA000725B74 /* redAsteroidS.png */; };
+		21C4F5FE1A726E3600725B74 /* greenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F5FD1A726E3600725B74 /* greenDot.png */; };
+		21C4F6041A726E4D00725B74 /* sunDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6031A726E4D00725B74 /* sunDot.png */; };
+		21C4F6081A726EDE00725B74 /* blueAsteroidS.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6051A726EDE00725B74 /* blueAsteroidS.png */; };
+		21C4F6091A726EDE00725B74 /* blueAsteroidM.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6061A726EDE00725B74 /* blueAsteroidM.png */; };
+		21C4F60A1A726EDE00725B74 /* blueAsteroidL.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6071A726EDE00725B74 /* blueAsteroidL.png */; };
+		21C4F60E1A726FF100725B74 /* greenAsteroidM.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F60B1A726FF100725B74 /* greenAsteroidM.png */; };
+		21C4F60F1A726FF100725B74 /* greenAsteroidS.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F60C1A726FF100725B74 /* greenAsteroidS.png */; };
+		21C4F6101A726FF100725B74 /* greenAsteroidL.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F60D1A726FF100725B74 /* greenAsteroidL.png */; };
+		21C4F6141A72714A00725B74 /* blackAsteroidM.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6111A72714A00725B74 /* blackAsteroidM.png */; };
+		21C4F6151A72714A00725B74 /* blackAsteroidS.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6121A72714A00725B74 /* blackAsteroidS.png */; };
+		21C4F6161A72714A00725B74 /* blackAsteroidL.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6131A72714A00725B74 /* blackAsteroidL.png */; };
+		21C4F61A1A7272B000725B74 /* satelliteS.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6171A7272B000725B74 /* satelliteS.png */; };
+		21C4F61B1A7272B000725B74 /* satelliteL.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6181A7272B000725B74 /* satelliteL.png */; };
+		21C4F61C1A7272B000725B74 /* satelliteM.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6191A7272B000725B74 /* satelliteM.png */; };
+		21C4F6261A72742900725B74 /* purpleAsteroidS.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6231A72742900725B74 /* purpleAsteroidS.png */; };
+		21C4F6271A72742900725B74 /* purpleAsteroidL.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6241A72742900725B74 /* purpleAsteroidL.png */; };
+		21C4F6281A72742900725B74 /* purpleAsteroidM.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C4F6251A72742900725B74 /* purpleAsteroidM.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21100C541A6AE8270007CDB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21100C321A6AE8270007CDB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21100C391A6AE8270007CDB4;
+			remoteInfo = "Orbit 7";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21100C3A1A6AE8270007CDB4 /* Orbit 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Orbit 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21100C3E1A6AE8270007CDB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21100C3F1A6AE8270007CDB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21100C411A6AE8270007CDB4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		21100C431A6AE8270007CDB4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		21100C451A6AE8270007CDB4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		21100C481A6AE8270007CDB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21100C4A1A6AE8270007CDB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		21100C4D1A6AE8270007CDB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		21100C531A6AE8270007CDB4 /* Orbit 7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orbit 7Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21100C581A6AE8270007CDB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21100C591A6AE8270007CDB4 /* Orbit_7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orbit_7Tests.swift; sourceTree = "<group>"; };
+		21100C631A6AE9440007CDB4 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		21100C651A6AE9600007CDB4 /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		21100C671A6AE97A0007CDB4 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		21100C981A6AED450007CDB4 /* zapzap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zapzap.wav; sourceTree = "<group>"; };
+		21100C9A1A6AEDF50007CDB4 /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stars.sks; sourceTree = "<group>"; };
+		2134CE931A7092B1008E76C3 /* asteroid2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asteroid2.png; sourceTree = "<group>"; };
+		2156C0CC1A6C20950067C612 /* ParticleFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParticleFire.sks; sourceTree = "<group>"; };
+		2156C0CD1A6C20950067C612 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		217902891A744CC500B7A1BE /* Spiraling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Spiraling.wav; sourceTree = "<group>"; };
+		2179028B1A7451A900B7A1BE /* playerlife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerlife.png; sourceTree = "<group>"; };
+		218963C21A73D3EB00877B48 /* menuTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuTest.png; sourceTree = "<group>"; };
+		218963CA1A73D85600877B48 /* redDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redDot@2x.png"; sourceTree = "<group>"; };
+		218963CE1A73D94800877B48 /* purpleDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purpleDot@2x.png"; sourceTree = "<group>"; };
+		218963D01A73D9C800877B48 /* blueDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueDot@2x.png"; sourceTree = "<group>"; };
+		218963D21A73DAC700877B48 /* greenDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenDot@2x.png"; sourceTree = "<group>"; };
+		218963D81A73E62600877B48 /* sunDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunDot@2x.png"; sourceTree = "<group>"; };
+		21C4F5F51A726AA000725B74 /* redAsteroidL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redAsteroidL.png; sourceTree = "<group>"; };
+		21C4F5F61A726AA000725B74 /* redAsteroidM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redAsteroidM.png; sourceTree = "<group>"; };
+		21C4F5F71A726AA000725B74 /* redAsteroidS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redAsteroidS.png; sourceTree = "<group>"; };
+		21C4F5FD1A726E3600725B74 /* greenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenDot.png; sourceTree = "<group>"; };
+		21C4F6031A726E4D00725B74 /* sunDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunDot.png; sourceTree = "<group>"; };
+		21C4F6051A726EDE00725B74 /* blueAsteroidS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueAsteroidS.png; sourceTree = "<group>"; };
+		21C4F6061A726EDE00725B74 /* blueAsteroidM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueAsteroidM.png; sourceTree = "<group>"; };
+		21C4F6071A726EDE00725B74 /* blueAsteroidL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueAsteroidL.png; sourceTree = "<group>"; };
+		21C4F60B1A726FF100725B74 /* greenAsteroidM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenAsteroidM.png; sourceTree = "<group>"; };
+		21C4F60C1A726FF100725B74 /* greenAsteroidS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenAsteroidS.png; sourceTree = "<group>"; };
+		21C4F60D1A726FF100725B74 /* greenAsteroidL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenAsteroidL.png; sourceTree = "<group>"; };
+		21C4F6111A72714A00725B74 /* blackAsteroidM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackAsteroidM.png; sourceTree = "<group>"; };
+		21C4F6121A72714A00725B74 /* blackAsteroidS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackAsteroidS.png; sourceTree = "<group>"; };
+		21C4F6131A72714A00725B74 /* blackAsteroidL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackAsteroidL.png; sourceTree = "<group>"; };
+		21C4F6171A7272B000725B74 /* satelliteS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = satelliteS.png; sourceTree = "<group>"; };
+		21C4F6181A7272B000725B74 /* satelliteL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = satelliteL.png; sourceTree = "<group>"; };
+		21C4F6191A7272B000725B74 /* satelliteM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = satelliteM.png; sourceTree = "<group>"; };
+		21C4F6231A72742900725B74 /* purpleAsteroidS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleAsteroidS.png; sourceTree = "<group>"; };
+		21C4F6241A72742900725B74 /* purpleAsteroidL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleAsteroidL.png; sourceTree = "<group>"; };
+		21C4F6251A72742900725B74 /* purpleAsteroidM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleAsteroidM.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21100C371A6AE8270007CDB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21100C501A6AE8270007CDB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21100C311A6AE8270007CDB4 = {
+			isa = PBXGroup;
+			children = (
+				2156C0CC1A6C20950067C612 /* ParticleFire.sks */,
+				2156C0CD1A6C20950067C612 /* spark.png */,
+				21100C3C1A6AE8270007CDB4 /* Orbit 7 */,
+				21100C561A6AE8270007CDB4 /* Orbit 7Tests */,
+				21100C3B1A6AE8270007CDB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21100C3B1A6AE8270007CDB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21100C3A1A6AE8270007CDB4 /* Orbit 7.app */,
+				21100C531A6AE8270007CDB4 /* Orbit 7Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21100C3C1A6AE8270007CDB4 /* Orbit 7 */ = {
+			isa = PBXGroup;
+			children = (
+				21100C411A6AE8270007CDB4 /* GameScene.sks */,
+				21100C3F1A6AE8270007CDB4 /* AppDelegate.swift */,
+				21100C651A6AE9600007CDB4 /* Shapes.swift */,
+				21100C631A6AE9440007CDB4 /* Menu.swift */,
+				21100C431A6AE8270007CDB4 /* GameScene.swift */,
+				21100C671A6AE97A0007CDB4 /* GameOver.swift */,
+				21100C9A1A6AEDF50007CDB4 /* Stars.sks */,
+				21100C981A6AED450007CDB4 /* zapzap.wav */,
+				21100C451A6AE8270007CDB4 /* GameViewController.swift */,
+				21100C471A6AE8270007CDB4 /* Main.storyboard */,
+				21100C4A1A6AE8270007CDB4 /* Images.xcassets */,
+				21100C4C1A6AE8270007CDB4 /* LaunchScreen.xib */,
+				217902891A744CC500B7A1BE /* Spiraling.wav */,
+				21100C6D1A6AEC4C0007CDB4 /* Images */,
+				21100C3D1A6AE8270007CDB4 /* Supporting Files */,
+			);
+			path = "Orbit 7";
+			sourceTree = "<group>";
+		};
+		21100C3D1A6AE8270007CDB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21100C3E1A6AE8270007CDB4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21100C561A6AE8270007CDB4 /* Orbit 7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				21100C591A6AE8270007CDB4 /* Orbit_7Tests.swift */,
+				21100C571A6AE8270007CDB4 /* Supporting Files */,
+			);
+			path = "Orbit 7Tests";
+			sourceTree = "<group>";
+		};
+		21100C571A6AE8270007CDB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21100C581A6AE8270007CDB4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21100C6D1A6AEC4C0007CDB4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				218963D81A73E62600877B48 /* sunDot@2x.png */,
+				218963D21A73DAC700877B48 /* greenDot@2x.png */,
+				218963D01A73D9C800877B48 /* blueDot@2x.png */,
+				218963CE1A73D94800877B48 /* purpleDot@2x.png */,
+				218963CA1A73D85600877B48 /* redDot@2x.png */,
+				218963C21A73D3EB00877B48 /* menuTest.png */,
+				21C4F6231A72742900725B74 /* purpleAsteroidS.png */,
+				21C4F6241A72742900725B74 /* purpleAsteroidL.png */,
+				21C4F6251A72742900725B74 /* purpleAsteroidM.png */,
+				21C4F6171A7272B000725B74 /* satelliteS.png */,
+				21C4F6181A7272B000725B74 /* satelliteL.png */,
+				21C4F6191A7272B000725B74 /* satelliteM.png */,
+				21C4F6111A72714A00725B74 /* blackAsteroidM.png */,
+				21C4F6121A72714A00725B74 /* blackAsteroidS.png */,
+				21C4F6131A72714A00725B74 /* blackAsteroidL.png */,
+				21C4F60B1A726FF100725B74 /* greenAsteroidM.png */,
+				21C4F60C1A726FF100725B74 /* greenAsteroidS.png */,
+				2179028B1A7451A900B7A1BE /* playerlife.png */,
+				21C4F60D1A726FF100725B74 /* greenAsteroidL.png */,
+				21C4F6031A726E4D00725B74 /* sunDot.png */,
+				21C4F6051A726EDE00725B74 /* blueAsteroidS.png */,
+				21C4F6061A726EDE00725B74 /* blueAsteroidM.png */,
+				21C4F6071A726EDE00725B74 /* blueAsteroidL.png */,
+				21C4F5FD1A726E3600725B74 /* greenDot.png */,
+				21C4F5F51A726AA000725B74 /* redAsteroidL.png */,
+				21C4F5F61A726AA000725B74 /* redAsteroidM.png */,
+				21C4F5F71A726AA000725B74 /* redAsteroidS.png */,
+				2134CE931A7092B1008E76C3 /* asteroid2.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21100C391A6AE8270007CDB4 /* Orbit 7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21100C5D1A6AE8270007CDB4 /* Build configuration list for PBXNativeTarget "Orbit 7" */;
+			buildPhases = (
+				21100C361A6AE8270007CDB4 /* Sources */,
+				21100C371A6AE8270007CDB4 /* Frameworks */,
+				21100C381A6AE8270007CDB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Orbit 7";
+			productName = "Orbit 7";
+			productReference = 21100C3A1A6AE8270007CDB4 /* Orbit 7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21100C521A6AE8270007CDB4 /* Orbit 7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21100C601A6AE8270007CDB4 /* Build configuration list for PBXNativeTarget "Orbit 7Tests" */;
+			buildPhases = (
+				21100C4F1A6AE8270007CDB4 /* Sources */,
+				21100C501A6AE8270007CDB4 /* Frameworks */,
+				21100C511A6AE8270007CDB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21100C551A6AE8270007CDB4 /* PBXTargetDependency */,
+			);
+			name = "Orbit 7Tests";
+			productName = "Orbit 7Tests";
+			productReference = 21100C531A6AE8270007CDB4 /* Orbit 7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21100C321A6AE8270007CDB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Mav3r1ck;
+				TargetAttributes = {
+					21100C391A6AE8270007CDB4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 9XQ2GUK3K4;
+					};
+					21100C521A6AE8270007CDB4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 21100C391A6AE8270007CDB4;
+					};
+				};
+			};
+			buildConfigurationList = 21100C351A6AE8270007CDB4 /* Build configuration list for PBXProject "Orbit 7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21100C311A6AE8270007CDB4;
+			productRefGroup = 21100C3B1A6AE8270007CDB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21100C391A6AE8270007CDB4 /* Orbit 7 */,
+				21100C521A6AE8270007CDB4 /* Orbit 7Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21100C381A6AE8270007CDB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				218963D91A73E62600877B48 /* sunDot@2x.png in Resources */,
+				2156C0CF1A6C20950067C612 /* spark.png in Resources */,
+				21C4F6161A72714A00725B74 /* blackAsteroidL.png in Resources */,
+				21100C4E1A6AE8270007CDB4 /* LaunchScreen.xib in Resources */,
+				21C4F6151A72714A00725B74 /* blackAsteroidS.png in Resources */,
+				218963C31A73D3EB00877B48 /* menuTest.png in Resources */,
+				21C4F60A1A726EDE00725B74 /* blueAsteroidL.png in Resources */,
+				21C4F5F91A726AA000725B74 /* redAsteroidM.png in Resources */,
+				21C4F6281A72742900725B74 /* purpleAsteroidM.png in Resources */,
+				2134CE941A7092B1008E76C3 /* asteroid2.png in Resources */,
+				21C4F6271A72742900725B74 /* purpleAsteroidL.png in Resources */,
+				218963D11A73D9C800877B48 /* blueDot@2x.png in Resources */,
+				218963CF1A73D94800877B48 /* purpleDot@2x.png in Resources */,
+				21C4F5FA1A726AA000725B74 /* redAsteroidS.png in Resources */,
+				2179028A1A744CC500B7A1BE /* Spiraling.wav in Resources */,
+				21C4F6261A72742900725B74 /* purpleAsteroidS.png in Resources */,
+				21C4F60E1A726FF100725B74 /* greenAsteroidM.png in Resources */,
+				2156C0CE1A6C20950067C612 /* ParticleFire.sks in Resources */,
+				218963D31A73DAC700877B48 /* greenDot@2x.png in Resources */,
+				21C4F5FE1A726E3600725B74 /* greenDot.png in Resources */,
+				21C4F61A1A7272B000725B74 /* satelliteS.png in Resources */,
+				21100C991A6AED450007CDB4 /* zapzap.wav in Resources */,
+				21C4F6091A726EDE00725B74 /* blueAsteroidM.png in Resources */,
+				21C4F5F81A726AA000725B74 /* redAsteroidL.png in Resources */,
+				218963CB1A73D85600877B48 /* redDot@2x.png in Resources */,
+				21100C4B1A6AE8270007CDB4 /* Images.xcassets in Resources */,
+				21C4F61B1A7272B000725B74 /* satelliteL.png in Resources */,
+				21C4F6081A726EDE00725B74 /* blueAsteroidS.png in Resources */,
+				21100C9B1A6AEDF50007CDB4 /* Stars.sks in Resources */,
+				2179028C1A7451A900B7A1BE /* playerlife.png in Resources */,
+				21100C421A6AE8270007CDB4 /* GameScene.sks in Resources */,
+				21C4F6141A72714A00725B74 /* blackAsteroidM.png in Resources */,
+				21100C491A6AE8270007CDB4 /* Main.storyboard in Resources */,
+				21C4F6041A726E4D00725B74 /* sunDot.png in Resources */,
+				21C4F60F1A726FF100725B74 /* greenAsteroidS.png in Resources */,
+				21C4F6101A726FF100725B74 /* greenAsteroidL.png in Resources */,
+				21C4F61C1A7272B000725B74 /* satelliteM.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21100C511A6AE8270007CDB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21100C361A6AE8270007CDB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21100C441A6AE8270007CDB4 /* GameScene.swift in Sources */,
+				21100C461A6AE8270007CDB4 /* GameViewController.swift in Sources */,
+				21100C661A6AE9600007CDB4 /* Shapes.swift in Sources */,
+				21100C681A6AE97A0007CDB4 /* GameOver.swift in Sources */,
+				21100C641A6AE9440007CDB4 /* Menu.swift in Sources */,
+				21100C401A6AE8270007CDB4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21100C4F1A6AE8270007CDB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21100C5A1A6AE8270007CDB4 /* Orbit_7Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21100C551A6AE8270007CDB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21100C391A6AE8270007CDB4 /* Orbit 7 */;
+			targetProxy = 21100C541A6AE8270007CDB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21100C471A6AE8270007CDB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21100C481A6AE8270007CDB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21100C4C1A6AE8270007CDB4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21100C4D1A6AE8270007CDB4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21100C5B1A6AE8270007CDB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21100C5C1A6AE8270007CDB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21100C5E1A6AE8270007CDB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Orbit 7/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21100C5F1A6AE8270007CDB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Orbit 7/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		21100C611A6AE8270007CDB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Orbit 7Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orbit 7.app/Orbit 7";
+			};
+			name = Debug;
+		};
+		21100C621A6AE8270007CDB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Orbit 7Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orbit 7.app/Orbit 7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21100C351A6AE8270007CDB4 /* Build configuration list for PBXProject "Orbit 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21100C5B1A6AE8270007CDB4 /* Debug */,
+				21100C5C1A6AE8270007CDB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21100C5D1A6AE8270007CDB4 /* Build configuration list for PBXNativeTarget "Orbit 7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21100C5E1A6AE8270007CDB4 /* Debug */,
+				21100C5F1A6AE8270007CDB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21100C601A6AE8270007CDB4 /* Build configuration list for PBXNativeTarget "Orbit 7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21100C611A6AE8270007CDB4 /* Debug */,
+				21100C621A6AE8270007CDB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21100C321A6AE8270007CDB4 /* Project object */;
+}
