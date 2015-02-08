@@ -59,10 +59,8 @@ class GameScene: SKScene {
         // Player Life Image locations
         playerLifeImage1.position = CGPoint(x: size.width/1.10, y: size.height/1.08)
         addChild(playerLifeImage1)
-        
         playerLifeImage2.position = CGPoint(x: size.width/1.075, y: size.height/1.08)
         addChild(playerLifeImage2)
-        
         playerLifeImage3.position = CGPoint(x: size.width/1.05, y: size.height/1.08)
         addChild(playerLifeImage3)
         
@@ -75,44 +73,25 @@ class GameScene: SKScene {
         addChild(stars)
         
         //Func Add Squares
-        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock(addSquareBox),SKAction.waitForDuration(0.9)])
+        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock(addNodeToScene),SKAction.waitForDuration(0.9)])
             ))
     }
     
-    // Random CGFloats
-    func randomA() -> CGFloat {
-        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
-    }
     
-    func random(#min: CGFloat, max: CGFloat) -> CGFloat {
-        return randomA() * (max - min) + min
-    }
-    
-  
-    //Func Add Squares
-    func addSquareBox() {
+    @objc private func addNodeToScene() {
+        let radius: CGFloat = 50
+        let node = Shape.randomShape().createSpriteNode()
+        let randomY = radius + CGFloat(arc4random_uniform(UInt32(frame.height - radius * 2)))
+        let initialPosition = CGPoint(x: frame.width + radius, y: randomY)
+        node.position = initialPosition
+        addChild(node)
         
-        var randomShape = Shape.randomShape().createSpriteNode()
-        
-        let actualY = random(min: randomShape.size.height, max: size.height - randomShape.size.height)
-        randomShape.position = CGPoint(x: size.width + randomShape.size.width/2, y: actualY)
-        
-        var actualDuration = random(min: CGFloat(5.0 * gameSpeed), max: CGFloat(10 * gameSpeed)) //change speed of adding shapes.
-        
-        // Move Objects
-        var bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPointMake(-1000, 9.75))
-        bezierPath.addLineToPoint(CGPointMake(100, 0))
-        bezierPath.addCurveToPoint(CGPointMake(-289.5, 232.5), controlPoint1: CGPointMake(-146.5, 169.5), controlPoint2: CGPointMake(-221, 232.5))
-        bezierPath.addCurveToPoint(CGPointMake(-420.5, 169.5), controlPoint1: CGPointMake(-358, 232.5), controlPoint2: CGPointMake(-420.5, 169.5))
-        bezierPath.addLineToPoint(CGPointMake(-1000, 0))
-        
-        let actionMoveOne = SKAction.followPath(bezierPath.CGPath, duration: NSTimeInterval(actualDuration))
-        
-        // End ActionMove
-        let actionMoveDone = SKAction.removeFromParent()
-        
-        randomShape.runAction(SKAction.sequence([actionMoveOne,actionMoveDone]))
+        let endPosition = CGPoint(x: -radius, y: initialPosition.y)
+        let action = SKAction.moveTo(endPosition, duration: 3)
+        node.runAction(action) {
+            node.removeFromParent()
+            
+        }
         
         if playerlife < 1 {
             let loseAction = SKAction.runBlock() {
@@ -122,12 +101,13 @@ class GameScene: SKScene {
                 self.audioPlayerTwo.stop()
             }
             
-            randomShape.runAction(SKAction.sequence([loseAction]))
+            node.runAction(SKAction.sequence([loseAction]))
             
         }
-        addChild(randomShape)
+
     }
     
+  
  
     // Adding Touches
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

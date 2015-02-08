@@ -17,7 +17,6 @@ var gamelvlLable = ""
 var gameObjective: Int!
 
 class Menu: SKScene {
-
     
     var audioPlayer = AVAudioPlayer()
     let gameScene = GameScene()
@@ -54,11 +53,6 @@ class Menu: SKScene {
         
         // Background Color
         backgroundColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-        
-
-        
-        
-        
         
     func addOrbitingToShape(shape: SKSpriteNode, orbitSize: CGSize, rotateDegrees: Double, reverseOrbit: String) {
             
@@ -226,7 +220,7 @@ class Menu: SKScene {
                     gameObjective = 250
                     
                 }
-                ]))
+            ]))
         }
     }
     
