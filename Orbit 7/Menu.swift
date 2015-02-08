@@ -54,7 +54,7 @@ class Menu: SKScene {
         // Background Color
         backgroundColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         
-    func addOrbitingToShape(shape: SKSpriteNode, orbitSize: CGSize, rotateDegrees: Double, reverseOrbit: String) {
+        func addOrbitingToShape(shape: SKSpriteNode, orbitSize: CGSize, rotateDegrees: Double, reverseOrbit: Bool, duration: NSTimeInterval) {
             
             let orbitPathOrigin = CGPoint(x: view.center.x - orbitSize.width / 2, y: view.center.y - orbitSize.height / 2)
             let orbitPathRect = CGRect(origin: orbitPathOrigin, size: orbitSize)
@@ -81,60 +81,56 @@ class Menu: SKScene {
             let spriteKitPath = CGPathCreateCopyByTransformingPath(shapeLayer.path, &spriteKitTransform)
             
             
-            if reverseOrbit == "purple" {
-                
-                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: 15)
-                shape.runAction(SKAction.repeatActionForever(orbitActionTwo.reversedAction()))
-                
-            } else if reverseOrbit == "green" {
-                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: 8)
+            if reverseOrbit == false {
+                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: duration)
                 shape.runAction(SKAction.repeatActionForever(orbitActionTwo))
                 
-            } else if reverseOrbit == "red" {
-                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: 5)
-                shape.runAction(SKAction.repeatActionForever(orbitActionTwo))
+            } else if reverseOrbit == true {
                 
-            } else if reverseOrbit == "blue"{
-                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: 5)
+                
+                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: duration)
                 shape.runAction(SKAction.repeatActionForever(orbitActionTwo.reversedAction()))
             }
-            
-        }
+        
+        
+    }
         
         // Sun Dot
         sunNode.position = CGPoint(x: size.width/2, y:size.height/2)
         sunNode.name = "Sun"
         addChild(sunNode)
         
+        
         // Green Asteroid
         let greenCircleOrbitSize = CGSize(width: 200 , height: 200)
-        addOrbitingToShape(greenNode, greenCircleOrbitSize, 90, "green")
+        addOrbitingToShape(greenNode, greenCircleOrbitSize, 90, false, 8)
         greenNode.name = "greenDot"
         addChild(greenNode)
         
-        
         // Red Asteroid
         let redCircleOrbitSize = CGSize(width: sunNode.xScale + 280, height: sunNode.yScale + 500)
-        addOrbitingToShape(redNode, redCircleOrbitSize, 330, "red")
+        addOrbitingToShape(redNode, redCircleOrbitSize, 330, false, 5)
         redNode.name = "redDot"
         addChild(redNode)
         
         
         // Blue Asteroid
         let blueCircleOrbitSize = CGSize(width: 500 , height: 540)
-        addOrbitingToShape(blueNode, blueCircleOrbitSize, 90, "blue")
+        addOrbitingToShape(blueNode, blueCircleOrbitSize, 90, true, 5)
         blueNode.name = "blueDot"
         addChild(blueNode)
         
         
         // Purple Asteroid
         let purpleCircleOrbitSize = CGSize(width: 700 , height: 650)
-        addOrbitingToShape(purpleNode, purpleCircleOrbitSize, 45, "purple")
+        addOrbitingToShape(purpleNode, purpleCircleOrbitSize, 45, true, 15)
         purpleNode.name = "purpleDot"
         addChild(purpleNode)
         
         
-    }
+        
+}
+    
     
     // Game Levels
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
