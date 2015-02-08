@@ -55,31 +55,7 @@ class Menu: SKScene {
         // Background Color
         backgroundColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         
-        // Sun Dot
-        sunNode.position = CGPoint(x: size.width/2, y:size.height/2)
-        sunNode.name = "Sun"
-        addChild(sunNode)
-        
-        // Green Dot
-        greenNode.position = CGPoint(x:sunNode.xScale - 100, y:sunNode.yScale + 100)
-        
-        addChild(greenNode)
-        greenNode.name = "greenDot"
-        
-        // Red Dot
-        redNode.position = CGPoint(x: sunNode.xScale + 200, y:sunNode.yScale + 100)
-        addChild(redNode)
-        redNode.name = "redDot"
-        
-        // Blue Dot
-        blueNode.position = CGPoint(x: sunNode.xScale, y:sunNode.yScale + -240)
-        addChild(blueNode)
-        blueNode.name = "blueDot"
-        
-        // Purple Dot
-        purpleNode.position = CGPoint(x: sunNode.xScale + -250, y:sunNode.yScale + 180)
-        addChild(purpleNode)
-        purpleNode.name = "purpleDot"
+
         
         
         
@@ -131,17 +107,39 @@ class Menu: SKScene {
             
         }
         
-        let redCircleOrbitSize = CGSize(width: sunNode.xScale + 280, height: sunNode.yScale + 500)
-        addOrbitingToShape(redNode, redCircleOrbitSize, 330, "red")
+        // Sun Dot
+        sunNode.position = CGPoint(x: size.width/2, y:size.height/2)
+        sunNode.name = "Sun"
+        addChild(sunNode)
         
-        let blueCircleOrbitSize = CGSize(width: 500 , height: 540)
-        addOrbitingToShape(blueNode, blueCircleOrbitSize, 90, "blue")
-        
+        // Green Asteroid
         let greenCircleOrbitSize = CGSize(width: 200 , height: 200)
         addOrbitingToShape(greenNode, greenCircleOrbitSize, 90, "green")
+        greenNode.name = "greenDot"
+        addChild(greenNode)
         
+        
+        // Red Asteroid
+        let redCircleOrbitSize = CGSize(width: sunNode.xScale + 280, height: sunNode.yScale + 500)
+        addOrbitingToShape(redNode, redCircleOrbitSize, 330, "red")
+        redNode.name = "redDot"
+        addChild(redNode)
+        
+        
+        // Blue Asteroid
+        let blueCircleOrbitSize = CGSize(width: 500 , height: 540)
+        addOrbitingToShape(blueNode, blueCircleOrbitSize, 90, "blue")
+        blueNode.name = "blueDot"
+        addChild(blueNode)
+        
+        
+        // Purple Asteroid
         let purpleCircleOrbitSize = CGSize(width: 700 , height: 650)
         addOrbitingToShape(purpleNode, purpleCircleOrbitSize, 45, "purple")
+        purpleNode.name = "purpleDot"
+        addChild(purpleNode)
+        
+        
     }
     
     // Game Levels
