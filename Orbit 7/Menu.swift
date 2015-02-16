@@ -12,7 +12,7 @@ import AVFoundation
 
 
 var gameLevel: Int?
-var gameSpeed = NSTimeInterval(((Double(rand()) %  900)+100.0) / 1000.0)
+var gameSpeed: UInt32?
 var gamelvlLable = ""
 var gameObjective: Int!
 
@@ -149,7 +149,7 @@ class Menu: SKScene {
                     let reveal = SKTransition.crossFadeWithDuration(0.5)
                     let scene = GameScene(size: self.size)
                     self.view?.presentScene(scene, transition:reveal)
-                    gameSpeed = 1.5
+                    gameSpeed = 10
                     gameLevel = 1
                     gameObjective = 50
                     
@@ -164,7 +164,7 @@ class Menu: SKScene {
                     let reveal = SKTransition.crossFadeWithDuration(0.5)
                     let scene = GameScene(size: self.size)
                     self.view?.presentScene(scene, transition:reveal)
-                    gameSpeed = 0.8
+                    gameSpeed = 8
                     gameLevel = 2
                     gameObjective = 100
                     
@@ -180,7 +180,7 @@ class Menu: SKScene {
                     let reveal = SKTransition.crossFadeWithDuration(0.5)
                     let scene = GameScene(size: self.size)
                     self.view?.presentScene(scene, transition:reveal)
-                    gameSpeed = 0.7
+                    gameSpeed = 6
                     gameLevel = 3
                     gameObjective = 150
                 }
@@ -195,7 +195,7 @@ class Menu: SKScene {
                     let reveal = SKTransition.crossFadeWithDuration(0.5)
                     let scene = GameScene(size: self.size)
                     self.view?.presentScene(scene, transition:reveal)
-                    gameSpeed = 0.6
+                    gameSpeed = 4
                     gameLevel = 4
                     gameObjective = 200
                     
@@ -211,7 +211,7 @@ class Menu: SKScene {
                     let reveal = SKTransition.crossFadeWithDuration(0.5)
                     let scene = GameScene(size: self.size)
                     self.view?.presentScene(scene, transition:reveal)
-                    gameSpeed = 0.59
+                    gameSpeed = 2
                     gameLevel = 5
                     gameObjective = 250
                     

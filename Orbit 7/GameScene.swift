@@ -86,8 +86,10 @@ class GameScene: SKScene {
         node.position = initialPosition
         addChild(node)
         
+        let objectspeed = NSTimeInterval(arc4random_uniform(gameSpeed!))
+        
         let endPosition = CGPoint(x: -radius, y: initialPosition.y)
-        let action = SKAction.moveTo(endPosition, duration: 3)
+        let action = SKAction.moveTo(endPosition, duration: objectspeed)
         node.runAction(action) {
             node.removeFromParent()
             
