@@ -1,4 +1,5 @@
 # Orbit7
 Open Source iOS Game created in SpriteKit with Swift
 
-![alt tag](http://s29.postimg.org/n9l6zppd1/Shapes.gif)
+![alt tag](https://www.mav3r1ck.com/content/images/2015/03/iTunesArtwork-2x-4.png)
+
