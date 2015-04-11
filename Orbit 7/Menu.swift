@@ -133,13 +133,14 @@ class Menu: SKScene {
     
     
     // Game Levels
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        let location = touches.anyObject()?.locationInNode(self)
-        var node = self.nodeAtPoint(location!)
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        let touchLocation = (touches.first as? UITouch)?.locationInNode(self)
+        let node = self.nodeAtPoint(touchLocation!)
+        
         audioPlayer.stop()
         
-        
-        
+    
         if node.name == "Sun" {
  
             runAction(SKAction.sequence([

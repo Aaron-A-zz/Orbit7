@@ -108,14 +108,14 @@ class GameScene: SKScene {
         }
 
     }
-    
   
  
     // Adding Touches
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
-        let location = touches.anyObject()?.locationInNode(self)
-        var node = self.nodeAtPoint(location!)
+        
+        let location = (touches.first as? UITouch)?.locationInNode(self)
+        let node = self.nodeAtPoint(location!)
         
         // Particles
         func explosion() {
@@ -208,10 +208,9 @@ class GameScene: SKScene {
         
     }
     
-    
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         let dropDown = SKAction.scaleTo(1.0, duration: 0.2)
-        
     }
+    
     
 }
