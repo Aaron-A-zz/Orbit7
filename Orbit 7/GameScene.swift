@@ -29,13 +29,17 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
-        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Spiraling",ofType: "wav")!)
+        let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Spiraling",ofType: "wav")!)
         
-        var error:NSError?
-        audioPlayerTwo = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-        audioPlayerTwo.prepareToPlay()
-        audioPlayerTwo.play()
-        audioPlayerTwo.numberOfLoops = -1
+        do {
+            audioPlayerTwo = try AVAudioPlayer(contentsOfURL: alertSound)
+            audioPlayerTwo.prepareToPlay()
+            audioPlayerTwo.play()
+            audioPlayerTwo.numberOfLoops = -1
+        } catch let error1 as NSError {
+            print(error1)
+        }
+
         
         // Set background Color
         backgroundColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -69,8 +73,8 @@ class GameScene: SKScene {
         
         //Background Stars * * *
         let stars = SKEmitterNode(fileNamed: "Stars")
-        stars.position = CGPointMake(400, 200)
-        addChild(stars)
+        stars!.position = CGPointMake(400, 200)
+        addChild(stars!)
         
         //Func Add Squares
         runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock(addNodeToScene),SKAction.waitForDuration(0.9)])
@@ -111,29 +115,33 @@ class GameScene: SKScene {
   
  
     // Adding Touches
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         
-        let location = (touches.first as? UITouch)?.locationInNode(self)
-        let node = self.nodeAtPoint(location!)
+        let location = (touches.first! as UITouch).locationInNode(self)
+        let node = self.nodeAtPoint(location)
         
         // Particles
         func explosion() {
             // Effects
             let sparkEmmiter = SKEmitterNode(fileNamed: "ParticleFire.sks")
-            sparkEmmiter.name = "Fire"
-            sparkEmmiter.position = location!
-            sparkEmmiter.targetNode = self
-            sparkEmmiter.particleLifetime = 1
-            self.addChild(sparkEmmiter)
+            sparkEmmiter!.name = "Fire"
+            sparkEmmiter!.position = location
+            sparkEmmiter!.targetNode = self
+            sparkEmmiter!.particleLifetime = 1
+            self.addChild(sparkEmmiter!)
             
             // Sounds
-            var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("zapzap",ofType: "wav")!)
+            let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("zapzap",ofType: "wav")!)
             
-            var error:NSError?
-            audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+            } catch let error1 as NSError {
+                print(error1)
+            }
+
             
             if  (playerScore > gameObjective) {
                 let reveal = SKTransition.fadeWithDuration(0.5)
@@ -200,7 +208,7 @@ class GameScene: SKScene {
     
     func showPauseAlert() {
         
-        var alert = UIAlertController(title: "\(gamelvlLable)", message: "Destroy the Asteroids! & Avoid the Satellites!", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "\(gamelvlLable)", message: "Destroy the Asteroids! & Avoid the Satellites!", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default)  { _ in
             
             })
@@ -208,7 +216,7 @@ class GameScene: SKScene {
         
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let dropDown = SKAction.scaleTo(1.0, duration: 0.2)
     }
     

@@ -17,7 +17,7 @@ class GameOverScene: SKScene {
         
         backgroundColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         
-        var message = won ? "You Won!" : "You Lost, Try again!"
+        let message = won ? "You Won!" : "You Lost, Try again!"
         
         let label = SKLabelNode(fontNamed: "DIN Condensed")
         label.text = message

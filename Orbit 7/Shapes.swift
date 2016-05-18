@@ -47,11 +47,11 @@ enum Shape: Int {
     static func randomShape() -> Shape {
         // Find out count of possible shapes
         var maxValue = 0
-        while let _ = self(rawValue: ++maxValue) {}
+        while let _ = self.init(rawValue: ++maxValue) {}
         // Generate random number from number of shapes
         let randomNumber = Int(arc4random_uniform(UInt32(maxValue)))
         // Create and return shape
-        let shape = self(rawValue: randomNumber)!
+        let shape = self.init(rawValue: randomNumber)!
         
         return shape
     }
@@ -90,9 +90,9 @@ let numbersAray = [3, 5, 7, 1, -1, -3, 5, -7]
 
 func randomScore() -> Int {
     
-    var unsignedArraycount = UInt32(numbersAray.count)
-    var unsignedRandomNumber = arc4random_uniform(unsignedArraycount)
-    var randomNumber = Int(unsignedRandomNumber)
+    let unsignedArraycount = UInt32(numbersAray.count)
+    let unsignedRandomNumber = arc4random_uniform(unsignedArraycount)
+    let randomNumber = Int(unsignedRandomNumber)
     return numbersAray[randomNumber]
     
 }

@@ -31,11 +31,15 @@ class Menu: SKScene {
         
         var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Spiraling",ofType: "wav")!)
         
-        var error:NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
-        audioPlayer.numberOfLoops = -1
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            audioPlayer.numberOfLoops = -1
+        } catch var error1 as NSError {
+            print(error1)
+        }
+
         
         // Level Label
         mygameLabel.fontName = "DIN Condensed"
@@ -48,8 +52,8 @@ class Menu: SKScene {
         
         // Add Stars!
         let stars = SKEmitterNode(fileNamed: "Stars")
-        stars.position = CGPointMake(400, 200)
-        addChild(stars)
+        stars!.position = CGPointMake(400, 200)
+        addChild(stars!)
         
         // Background Color
         backgroundColor = SKColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -82,13 +86,13 @@ class Menu: SKScene {
             
             
             if reverseOrbit == false {
-                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: duration)
+                let orbitActionTwo = SKAction.followPath(spriteKitPath!, asOffset: false, orientToPath: true, duration: duration)
                 shape.runAction(SKAction.repeatActionForever(orbitActionTwo))
                 
             } else if reverseOrbit == true {
                 
                 
-                let orbitActionTwo = SKAction.followPath(spriteKitPath, asOffset: false, orientToPath: true, duration: duration)
+                let orbitActionTwo = SKAction.followPath(spriteKitPath!, asOffset: false, orientToPath: true, duration: duration)
                 shape.runAction(SKAction.repeatActionForever(orbitActionTwo.reversedAction()))
             }
         
@@ -103,27 +107,27 @@ class Menu: SKScene {
         
         // Green Asteroid
         let greenCircleOrbitSize = CGSize(width: 200 , height: 200)
-        addOrbitingToShape(greenNode, greenCircleOrbitSize, 90, false, 8)
+        addOrbitingToShape(greenNode, orbitSize: greenCircleOrbitSize, rotateDegrees: 90, reverseOrbit: false, duration: 8)
         greenNode.name = "greenDot"
         addChild(greenNode)
         
         // Red Asteroid
         let redCircleOrbitSize = CGSize(width: sunNode.xScale + 280, height: sunNode.yScale + 500)
-        addOrbitingToShape(redNode, redCircleOrbitSize, 330, false, 5)
+        addOrbitingToShape(redNode, orbitSize: redCircleOrbitSize, rotateDegrees: 330, reverseOrbit: false, duration: 5)
         redNode.name = "redDot"
         addChild(redNode)
         
         
         // Blue Asteroid
         let blueCircleOrbitSize = CGSize(width: 500 , height: 540)
-        addOrbitingToShape(blueNode, blueCircleOrbitSize, 90, true, 5)
+        addOrbitingToShape(blueNode, orbitSize: blueCircleOrbitSize, rotateDegrees: 90, reverseOrbit: true, duration: 5)
         blueNode.name = "blueDot"
         addChild(blueNode)
         
         
         // Purple Asteroid
         let purpleCircleOrbitSize = CGSize(width: 700 , height: 650)
-        addOrbitingToShape(purpleNode, purpleCircleOrbitSize, 45, true, 15)
+        addOrbitingToShape(purpleNode, orbitSize: purpleCircleOrbitSize, rotateDegrees: 45, reverseOrbit: true, duration: 15)
         purpleNode.name = "purpleDot"
         addChild(purpleNode)
         
@@ -133,10 +137,10 @@ class Menu: SKScene {
     
     
     // Game Levels
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        let touchLocation = (touches.first as? UITouch)?.locationInNode(self)
-        let node = self.nodeAtPoint(touchLocation!)
+        let touchLocation = (touches.first! as UITouch).locationInNode(self)
+        let node = self.nodeAtPoint(touchLocation)
         
         audioPlayer.stop()
         
